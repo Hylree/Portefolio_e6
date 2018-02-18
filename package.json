@@ -1,0 +1,24 @@
+{
+  "name": "portefolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "npm start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hylree/Portefolio_e6.git"
+  },
+  "author": "Magnant Valentin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hylree/Portefolio_e6/issues"
+  },
+  "homepage": "https://github.com/Hylree/Portefolio_e6#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "nodemon": "^1.15.0"
+  }
+}
