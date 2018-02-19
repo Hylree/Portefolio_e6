@@ -282,40 +282,44 @@ $(document).ready(function() {
 
  
 //Header scroll
-const   banner = $(".locked-bottom").height(),
+/*const   banner = $(".locked-bottom").height(),
         infos = $(".locked-bottom-1").height(),
         exp = $("#exp").height(),
         veille = $(".locked-bottom-2").height(),
-        projets = $(".locked-bottom-3").height();
+        projets = $(".locked-bottom-3").height();*/
+
+const   banner = $("#banner").offset().top +225,
+        infos = $("#infos").offset().top + 180,
+        exp = $("#exp").offset().top + 135,
+        veille = $("#veille").offset().top + 45,
+        projet = $("#projet").offset().top+90;
 
 let     menu = $(window).scroll(scrolling),
         menuMobile = undefined,
         menuMobileEtat = undefined;
 
-
-        console.log($("#exp").offset().top);
 //console.log(first - lang);
 //console.log("lang" + lang);
 //console.log(first + lang - other);
-$("#view-click-infos").click(function (){
+$(".view-click-infos").click(function (){
     $('html, body').animate({
         scrollTop: $("#infos").offset().top
     }, 750);
 });
 
-$("#view-click-exp").click(function (){
+$(".view-click-exp").click(function (){
     $('html, body').animate({
         scrollTop: $("#exp").offset().top
     }, 750);
 });
 
-$("#view-click-projets").click(function (){
+$(".view-click-projets").click(function (){
     $('html, body').animate({
-        scrollTop: $("#projets").offset().top
+        scrollTop: $("#projet").offset().top
     }, 750);
 });
 
-$("#view-click-veille").click(function (){
+$(".view-click-veille").click(function (){
     $('html, body').animate({
         scrollTop: $("#veille").offset().top
     }, 750);
@@ -324,10 +328,9 @@ $("#view-click-veille").click(function (){
 
 function scrolling() {
     if (menu != undefined) {
-        const scroll_top = $(window).scrollTop();
+        const scroll_top = $(document).scrollTop() + $(window).height();
         var minDist = 1000;
         var closest = '';
-        var multiplicateur = 5;
         /**
         console.log(scroll_top + '<' + banner)
         console.log("testScroll: " + (infos - scrollPosition) / infos)
@@ -335,45 +338,58 @@ function scrolling() {
         console.log("banner : " + banner + " infos : " + infos + " exp : " + exp + " veille : " + veille + " projets : " + projets);
          */
         
+         if(scroll_top < infos) {
+            $('.locked-bottom').css('position','fixed').css('transform', 'translateY(-135px)');
+            $('.locked-bottom-1').css('position','fixed').css('transform', 'translateY(-90px)');
+            $('.locked-bottom-2').css('position','fixed').css('transform', 'translateY(-45px)');
+            $('.locked-bottom-3').css('position','fixed').css('transform', 'translateY(0px)');
 
-        $('.menu_scroll').each((i, el) => {
-            
-        var height = 45 * multiplicateur;
-        console.log(height)
+         }
+
+         if(scroll_top  > infos && scroll_top < exp){
+            $('.locked-bottom').css('position','relative').css('transform', 'translateY(0px)');
+            $('.locked-bottom-1').css('position','fixed').css('transform', 'translateY(-90px)');
+            $('.locked-bottom-2').css('position','fixed').css('transform', 'translateY(-45px)');
+            $('.locked-bottom-3').css('position','fixed').css('transform', 'translateY(0px)');
+       
+         }
+
+         if(scroll_top > exp && scroll_top < projet){
+            $('.locked-bottom').css('position','relative').css('transform', 'translateY(0px)');
+            $('.locked-bottom-1').css('position','relative').css('transform', 'translateY(0px)');
+            $('.locked-bottom-2').css('position','fixed').css('transform', 'translateY(-45px)');
+            $('.locked-bottom-3').css('position','fixed').css('transform', 'translateY(0px)');
+         
+         }
+
+         if(scroll_top > projet && scroll_top < veille){
+            $('.locked-bottom').css('position','relative').css('transform', 'translateY(0)');
+            $('.locked-bottom-1').css('position','relative').css('transform', 'translateY(0)');
+            $('.locked-bottom-2').css('position','relative').css('transform', 'translateY(0)');
+            $('.locked-bottom-3').css('position','fixed').css('transform', 'translateY(0px)');
+       
+         }
+         if(scroll_top > veille){
+            $('.locked-bottom').css('position','relative').css('transform', 'translateY(0)');
+            $('.locked-bottom-1').css('position','relative').css('transform', 'translateY(0)');
+            $('.locked-bottom-2').css('position','relative').css('transform', 'translateY(0)');
+            $('.locked-bottom-3').css('position','relative').css('transform', 'translateY(0px)');
+       
+         }
+
+        /*$('.menu_scroll').each((i, el) => {
             var thisDist = Math.abs(scroll_top - $(el).offset().top);
-            if(thisDist < (minDist + height)){
+            if(thisDist < minDist){
                 closest = el.id;
                 minDist = thisDist;
-                if (closest == "banner"){
-                    multiplicateur = 4;
-                }
-                if(closest == "infos"){
-                
-                    multiplicateur = 3;
-                }
-    
-                if(closest == "exp"){
-                
-                    multiplicateur = 2;
-                }
-    
-                if(closest == "projet"){
-                    
-                    multiplicateur = 1;
-                }
-                
-                if(closest == "veille"){
-                    
-                    multiplicateur = 0;
-                }
             }
 
         });
-
+        */
+/*
         if(closest != ''){
 
             if (closest == "banner"){
-                multiplicateur = 4;
             console.log(closest);
                 $('.locked-bottom').css('position','fixed').css('transform', 'translateY(-135px)');
                 $('.locked-bottom-1').css('position','fixed').css('transform', 'translateY(-90px)');
@@ -381,8 +397,6 @@ function scrolling() {
                 $('.locked-bottom-3').css('position','fixed').css('transform', 'translateY(0px)');
             }
             if(closest == "infos"){
-            
-                multiplicateur = 3;
                 console.log(closest);
                 $('.locked-bottom').css('position','relative').css('transform', 'translateY(0px)');
                 $('.locked-bottom-1').css('position','fixed').css('transform', 'translateY(-90px)');
@@ -391,8 +405,6 @@ function scrolling() {
             }
 
             if(closest == "exp"){
-            
-                multiplicateur = 2;
                 console.log(closest);
                 $('.locked-bottom').css('position','relative').css('transform', 'translateY(0px)');
                 $('.locked-bottom-1').css('position','relative').css('transform', 'translateY(0px)');
@@ -401,8 +413,6 @@ function scrolling() {
             }
 
             if(closest == "projet"){
-                
-                multiplicateur = 1;
             console.log(closest);
                 $('.locked-bottom').css('position','relative').css('transform', 'translateY(0)');
                 $('.locked-bottom-1').css('position','relative').css('transform', 'translateY(0)');
@@ -411,8 +421,6 @@ function scrolling() {
             }
             
             if(closest == "veille"){
-                
-                multiplicateur = 0;
                 $('.locked-bottom').css('position','relative').css('transform', 'translateY(0)');
                 $('.locked-bottom-1').css('position','relative').css('transform', 'translateY(0)');
                 $('.locked-bottom-2').css('position','relative').css('transform', 'translateY(0px)');
@@ -420,15 +428,12 @@ function scrolling() {
             }
             
         }
+*/
 
-/*
-       
-        */
         
     }
-    
 }
-//use detect scroll and change csss
+/** use detect scroll and change css */
 
 $(window).ready(function(){
     let viewportwidth = $(window).width();
@@ -448,25 +453,48 @@ $(window).ready(function(){
                                                 '<div class="bar3"></div>'+
                                             '</div>'+
                                             '<div id="mySidenav" class="sidenav">'+
-                                                '<a href="#" onclick="closeMenuMobile()" id="closebtn" class="closebtn">&times;</a>'+
-                                                '<a href="#">About</a>'+
-                                                '<a href="#">Services</a>'+
-                                                '<a href="#">Clients</a>'+
-                                                '<a href="#">Contact</a>'+
+                                                '<a onclick="closeMenuMobile()" id="closebtn" class="closebtn">&times;</a>'+
+                                                '<a href="#" onclick="closeMenuMobile()" class="view-click-infos">informations</a>'+
+                                                '<a href="#" onclick="closeMenuMobile()" class="view-click-exp">Mes expériences</a>'+
+                                                '<a href="#" onclick="closeMenuMobile()" class="view-click-projet">Les Projects</a>'+
+                                                '<a href="#" onclick="closeMenuMobile()" class="view-click-veille">La veille</a>'+
                                             '</div>');
         
+                                        $(".view-click-infos").click(function (){
+
+                                            console.log('je passe');
+                                        $('html, body').animate({
+                                            scrollTop: $("#infos").offset().top
+                                        }, 750);
+                                        });
+                                        
+                                        $(".view-click-exp").click(function (){
+                                            $('html, body').animate({
+                                                scrollTop: $("#exp").offset().top
+                                            }, 750);
+                                        });
+                                        
+                                        $(".view-click-projets").click(function (){
+                                            $('html, body').animate({
+                                                scrollTop: $("#projet").offset().top
+                                            }, 750);
+                                        });
+                                        
+                                        $(".view-click-veille").click(function (){
+                                            $('html, body').animate({
+                                                scrollTop: $("#veille").offset().top
+                                            }, 750);
+                                        });
 
         menu = undefined;
         
         $(window).scroll().stop();
-        console.log("first vrai");
 
     }
 
     if(viewportwidth > 755){
         menuMobileEtat = "viewFirstfalse";
         menu = $(window).scroll(scrolling);
-        console.log("first faux");
     }
 })
 
@@ -489,13 +517,40 @@ $(window).resize(function(){
             '</div>'+
             '<div id="mySidenav" class="sidenav">'+
                 '<a href="#" onclick="closeMenuMobile()" id="closebtn" class="closebtn">&times;</a>'+
-                '<a href="#">About</a>'+
-                '<a href="#">Services</a>'+
-                '<a href="#">Clients</a>'+
-                '<a href="#">Contact</a>'+
+                '<a href="#" onclick="closeMenuMobile()" class="view-click-infos">informations</a>'+
+                '<a href="#" onclick="closeMenuMobile()" class="view-click-exp">Mes expériences</a>'+
+                '<a href="#" onclick="closeMenuMobile()" class="view-click-projet">Les Projects</a>'+
+                '<a href="#" onclick="closeMenuMobile()" class="view-click-veille">La veille</a>'+
             '</div>');
             menuMobileEtat = "viewFirstTrue";
         }
+
+
+        $(".view-click-infos").click(function (){
+
+            console.log('je passe');
+        $('html, body').animate({
+            scrollTop: $("#infos").offset().top
+        }, 750);
+        });
+        
+        $(".view-click-exp").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#exp").offset().top
+            }, 750);
+        });
+        
+        $(".view-click-projets").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#projet").offset().top
+            }, 750);
+        });
+        
+        $(".view-click-veille").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#veille").offset().top
+            }, 750);
+        });
         
         menu = undefined;
         console.log("second vrai");

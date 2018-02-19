@@ -1,4 +1,4 @@
-sidenav {
+.sidenav {
     height: 100%;
     width: 250px;
     display: none;
@@ -8,7 +8,6 @@ sidenav {
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s;
     padding-top: 60px;
   }
   
