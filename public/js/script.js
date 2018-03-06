@@ -7,55 +7,18 @@ $(document).ready(function() {
             ]
         },
 
-        'languages': {
+        'bowling': {
             args: [
                 {
-                    title: 'LES LANGAGES',
+                    title: 'LES MISSIONS',
                     content:
                     '<div class="container">' +
-                        '<div class="row">' +
-
-                            '<div class="col-md-4">' +
-                                "<img src='/img/html5.png' class='icon icon-center'>" +
-                                '<h5 class="text-center">HTML</h5>' +
-                                "" +
-                            "</div>" +
-
-                            '<div class="col-md-4">' +
-                                "<img src='/img/css3.png' class='icon icon-center'>" +
-                                '<h5 class="text-center">CSS</h5>' +
-                                "" +
-                            "</div>" +
-
-                            '<div class="col-md-4 text-center">' +
-                                "<img src='/img/js.png' class='icon icon-center'>" +
-                                '<h5 class="text-center">Javascript</h5>' +
-                                "" +
-                            "</div>" +
-                        '</div>' +
-                    '</div>' +
-
-                    '<div class="container-fluid">' +
-                        '<div class="row ">' +
-
-                            '<div class="col-md-4 ">' +
-                                "<img src='/img/android-os.png' class='icon icon-center'>" +
-                                '<h5 class="text-center">Java for Android</h5>' +
-                                "" +
-                            "</div>" +
-
-                            '<div class="col-md-4">' +
-                                "<img src='/img/html5.png' class='icon icon-center'>" +
-                                '<h5 class="text-center">HTML 5</h5>' +
-                                "" +
-                            "</div>" +
-
-                            '<div class="col-md-4 text-center">' +
-                                "<img src='/img/css3.png' class='icon icon-center'>" +
-                                '<h5 class="text-center"></h5>' +
-                                "" +
-                            "</div>" +
-                        '</div>' +
+                        '<ul>' +
+                            '<li> Service en salle </li>' +
+                            '<li> Acceuil client </li>' +
+                            '<li> Préparation des menus </li>' +
+                            '<li> Barman </li>' +
+                        '</ul>' +
                     '</div>'
                 }
             ]
@@ -376,60 +339,6 @@ function scrolling() {
             $('.locked-bottom-3').css('position','relative').css('transform', 'translateY(0px)');
        
          }
-
-        /*$('.menu_scroll').each((i, el) => {
-            var thisDist = Math.abs(scroll_top - $(el).offset().top);
-            if(thisDist < minDist){
-                closest = el.id;
-                minDist = thisDist;
-            }
-
-        });
-        */
-/*
-        if(closest != ''){
-
-            if (closest == "banner"){
-            console.log(closest);
-                $('.locked-bottom').css('position','fixed').css('transform', 'translateY(-135px)');
-                $('.locked-bottom-1').css('position','fixed').css('transform', 'translateY(-90px)');
-                $('.locked-bottom-2').css('position','fixed').css('transform', 'translateY(-45px)');
-                $('.locked-bottom-3').css('position','fixed').css('transform', 'translateY(0px)');
-            }
-            if(closest == "infos"){
-                console.log(closest);
-                $('.locked-bottom').css('position','relative').css('transform', 'translateY(0px)');
-                $('.locked-bottom-1').css('position','fixed').css('transform', 'translateY(-90px)');
-                $('.locked-bottom-2').css('position','fixed').css('transform', 'translateY(-45px)');
-                $('.locked-bottom-3').css('position','fixed').css('transform', 'translateY(0px)');
-            }
-
-            if(closest == "exp"){
-                console.log(closest);
-                $('.locked-bottom').css('position','relative').css('transform', 'translateY(0px)');
-                $('.locked-bottom-1').css('position','relative').css('transform', 'translateY(0px)');
-                $('.locked-bottom-2').css('position','fixed').css('transform', 'translateY(-45px)');
-                $('.locked-bottom-3').css('position','fixed').css('transform', 'translateY(0px)');
-            }
-
-            if(closest == "projet"){
-            console.log(closest);
-                $('.locked-bottom').css('position','relative').css('transform', 'translateY(0)');
-                $('.locked-bottom-1').css('position','relative').css('transform', 'translateY(0)');
-                $('.locked-bottom-2').css('position','relative').css('transform', 'translateY(-45px)');
-                $('.locked-bottom-3').css('position','fixed').css('transform', 'translateY(0px)');
-            }
-            
-            if(closest == "veille"){
-                $('.locked-bottom').css('position','relative').css('transform', 'translateY(0)');
-                $('.locked-bottom-1').css('position','relative').css('transform', 'translateY(0)');
-                $('.locked-bottom-2').css('position','relative').css('transform', 'translateY(0px)');
-                $('.locked-bottom-3').css('position','relative').css('transform', 'translateY(0px)');
-            }
-            
-        }
-*/
-
         
     }
 }
@@ -574,3 +483,10 @@ function openMenuMobile() {
 function closeMenuMobile(){
     $('#mySidenav').toggle("slide");
 }
+
+$(".hover_bleu").click(function (event){
+    var idForPro = event.currentTarget.id;
+    if(idForPro === "bowling"){
+        console.log('coucou');
+    }
+});

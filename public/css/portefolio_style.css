@@ -101,8 +101,8 @@ opacity: 1;
     text-align: center;
 }
 .title-categories{
-    font-size: 30px;
-    margin: 20px 0 30px 10px;
+    font-size: 38px;
+    padding-top: 60px;
     
 }
 
@@ -175,7 +175,16 @@ opacity: 1;
     transition: height 0.2s ease-out;
     z-index: 4;
 }
+.hover_bleu{
+    border-left: 1px solid #DFDFDF;
+}
 
+.hover_bleu:hover {
+    position: relative;
+    border-left: solid 25px #F44336;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+}
 
 .locked-bottom:hover .header1{
     padding-left: 87px;
@@ -226,7 +235,7 @@ opacity: 1;
 .activiy{
     width: 100%;
     height: 400px;
-    margin: 80px 0;
+    margin: 40px 0;
     text-align: center;
     border: 1px solid #ddd;
 }
