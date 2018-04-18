@@ -66,7 +66,7 @@ $(document).ready(function() {
             ]
         },
 
-        'bowling': {
+        'bowing': {
             args: [
                 {
                     title: 'LES MISSIONS',
@@ -541,10 +541,3 @@ function openMenuMobile() {
 function closeMenuMobile(){
     $('#mySidenav').toggle("slide");
 }
-
-$(".hover_bleu").click(function (event){
-    var idForPro = event.currentTarget.id;
-    if(idForPro === "bowling"){
-        console.log('coucou');
-    }
-});
