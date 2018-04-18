@@ -354,9 +354,9 @@ function scrolling() {
         var minDist = 1000;
         var closest = '';
         
-        console.log(scroll_top)
-        console.log("scrool top: " + scroll_top );
-        console.log("banner : " + banner + " infos : " + infos + " exp : " + exp + " veille : " + veille + " projets : " + projet);
+        //console.log(scroll_top)
+        //console.log("scrool top: " + scroll_top );
+        //console.log("banner : " + banner + " infos : " + infos + " exp : " + exp + " veille : " + veille + " projets : " + projet);
         
         
          if(scroll_top < infos) {
