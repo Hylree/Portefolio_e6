@@ -17,13 +17,13 @@ h4 {
     margin-bottom: 224px;
 }
 .container_desc{
-    padding-top: 100px;
+    padding-top: 40px;
     margin: 0 auto;
     width: 100px;
 }
 
 .container_user{
-    margin-top: 120px;
+    margin-top: 40px;
     background: #fff;
     border-radius: 10px;
     height: 300px;
@@ -47,7 +47,7 @@ h4 {
 
 .container_user .col-md-6{
     
-  overflow: hidden;
+    overflow: hidden;
     padding-right: 0px;
     padding-left: 0px;
 }
@@ -59,6 +59,11 @@ h4 {
     justify-content: center;
     padding: 20px;
 }
+
+.progress{
+    height: 3px;
+}
+
 .center_block{
     
   display: flex;
@@ -108,7 +113,7 @@ h4 {
 .header-wrap-banner{
     padding: 15px 56px;
     background: #212121;
-    z-index: 2;
+    z-index: 0;
     cursor: default;
     position: absolute;
     width: 100%;
@@ -376,3 +381,25 @@ h4 {
 .card-1:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
+
+
+footer{
+    padding: 50px;
+    background-color: #212121;
+  }
+  footer a{
+    color: #bfffff;
+  }
+  footer a:hover{
+    color: white;
+  }
+  footer .container_footer{
+    text-align: center;
+    }
+
+    footer p{
+        text-align: center;
+        }
+  footer .container_footer *{
+      padding: 15px;
+  }
