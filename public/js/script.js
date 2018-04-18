@@ -313,8 +313,8 @@ $(document).ready(function() {
 const   banner = $("#banner").offset().top +225,
         infos = $("#infos").offset().top + 180,
         exp = $("#exp").offset().top + 135,
-        veille = $("#veille").offset().top + 45,
-        projet = $("#projet").offset().top+90;
+        veille = $("#veille").offset().top + 100,
+        projet = $("#projet").offset().top + 150;
 
 let     menu = $(window).scroll(scrolling),
         menuMobile = undefined,
@@ -353,12 +353,11 @@ function scrolling() {
         const scroll_top = $(document).scrollTop() + $(window).height();
         var minDist = 1000;
         var closest = '';
-        /**
-        console.log(scroll_top + '<' + banner)
-        console.log("testScroll: " + (infos - scrollPosition) / infos)
+        
+        console.log(scroll_top)
         console.log("scrool top: " + scroll_top );
-        console.log("banner : " + banner + " infos : " + infos + " exp : " + exp + " veille : " + veille + " projets : " + projets);
-         */
+        console.log("banner : " + banner + " infos : " + infos + " exp : " + exp + " veille : " + veille + " projets : " + projet);
+        
         
          if(scroll_top < infos) {
             $('.locked-bottom').css('position','fixed').css('transform', 'translateY(-135px)');
