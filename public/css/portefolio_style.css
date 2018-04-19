@@ -132,7 +132,7 @@ h4 {
 }
 
 .container_proj_pro{
-    padding: 50px;
+    padding-top: 50px;
     display: flex;
     height:100%;
     flex-direction: row;

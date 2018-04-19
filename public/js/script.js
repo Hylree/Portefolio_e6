@@ -313,7 +313,7 @@ const   banner = $("#banner").offset().top +225,
         infos = $("#infos").offset().top + 180,
         exp = $("#exp").offset().top + 135,
         veille = $("#veille").offset().top + 100,
-        projet = $("#projet").offset().top + 150;
+        projet = $("#projet").offset().top + 250;
 
 let     menu = $(window).scroll(scrolling),
         menuMobile = undefined,
