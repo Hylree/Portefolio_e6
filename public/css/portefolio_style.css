@@ -26,7 +26,7 @@ h4 {
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0 auto;
-    width: 350px;
+    width: 50px;
 }
 
 .container_user{
@@ -86,7 +86,7 @@ h4 {
   right: -9999px;
   bottom: -9999px;
   margin: auto;
-    height:300px;
+    width:100%;
     object-fit: cover;
 }
 
@@ -124,7 +124,6 @@ h4 {
     background: #212121;
     z-index: 0;
     cursor: default;
-    position: absolute;
     width: 100%;
     top: 0;
     bottom: auto;
@@ -159,11 +158,6 @@ h4 {
     
 }
 
-#header1{
-    position: relative;
-    background-image: url("../img/header1.jpg");
-    background-size: cover;
-}
 
 .muted {
     color: #989da0;
