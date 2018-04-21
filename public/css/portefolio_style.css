@@ -59,6 +59,7 @@ h4 {
 }
 .container_card{
     display: flex;
+    height:100%;
     border-radius: 0px 0px 10px 10px;
     background-color: #fff;
     flex-direction: column;
