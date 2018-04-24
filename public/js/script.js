@@ -303,11 +303,6 @@ $(document).ready(function() {
 
  
 //Header scroll
-/*const   banner = $(".locked-bottom").height(),
-        infos = $(".locked-bottom-1").height(),
-        exp = $("#exp").height(),
-        veille = $(".locked-bottom-2").height(),
-        projets = $(".locked-bottom-3").height();*/
 
 const   banner = $("#banner").offset().top +225,
         infos = $("#infos").offset().top + 180,
@@ -318,10 +313,7 @@ const   banner = $("#banner").offset().top +225,
 let     menu = $(window).scroll(scrolling),
         menuMobile = undefined,
         menuMobileEtat = undefined;
-
-//console.log(first - lang);
-//console.log("lang" + lang);
-//console.log(first + lang - other);
+        
 $(".view-click-infos").click(function (){
     $('html, body').animate({
         scrollTop: $("#infos").offset().top
