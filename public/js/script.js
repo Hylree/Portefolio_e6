@@ -412,36 +412,35 @@ $(window).ready(function(){
                                             '</div>'+
                                             '<div id="mySidenav" class="sidenav">'+
                                                 '<a onclick="closeMenuMobile()" id="closebtn" class="closebtn">&times;</a>'+
-                                                '<a href="#" onclick="closeMenuMobile()" class="view-click-infos">informations</a>'+
-                                                '<a href="#" onclick="closeMenuMobile()" class="view-click-exp">Mes expériences</a>'+
-                                                '<a href="#" onclick="closeMenuMobile()" class="view-click-projet">Les Projects</a>'+
-                                                '<a href="#" onclick="closeMenuMobile()" class="view-click-veille">La veille</a>'+
+                                                '<a  onclick="closeMenuMobile()" class="view-click-infos">informations</a>'+
+                                                '<a  onclick="closeMenuMobile()" class="view-click-exp">Mes expériences</a>'+
+                                                '<a onclick="closeMenuMobile()" class="view-click-projet">Les Projects</a>'+
+                                                '<a onclick="closeMenuMobile()" class="view-click-veille">La veille</a>'+
                                             '</div>');
         
                                         $(".view-click-infos").click(function (){
 
-                                            console.log('je passe');
-                                        $('html, body').animate({
-                                            scrollTop: $("#infos").offset().top
-                                        }, 750);
+                                            $('html, body').stop().animate({
+                                                scrollTop: $("#infos").offset().top + 50
+                                            }, 750, 'swing');
                                         });
                                         
                                         $(".view-click-exp").click(function (){
-                                            $('html, body').animate({
-                                                scrollTop: $("#exp").offset().top
-                                            }, 750);
+                                            $('html, body').stop().animate({
+                                                scrollTop: $("#exp").offset().top + 50
+                                            }, 750, 'swing');
                                         });
                                         
-                                        $(".view-click-projets").click(function (){
-                                            $('html, body').animate({
-                                                scrollTop: $("#projet").offset().top
-                                            }, 750);
+                                        $(".view-click-projet").click(function (){
+                                            $('html, body').stop().animate({
+                                                scrollTop: $("#projet").offset().top + 50
+                                            }, 750, 'swing');
                                         });
                                         
                                         $(".view-click-veille").click(function (){
-                                            $('html, body').animate({
-                                                scrollTop: $("#veille").offset().top
-                                            }, 750);
+                                            $('html, body').stop().animate({
+                                                scrollTop: $("#veille").offset().top + 50
+                                            }, 750, 'swing');
                                         });
 
         menu = undefined;

@@ -85,7 +85,8 @@ h4 {
   right: -9999px;
   bottom: -9999px;
   margin: auto;
-    width:100%;
+    width:90%;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -235,18 +236,51 @@ h4 {
 .locked-bottom:hover .header1{
     padding-left: 87px;
 }
-.locked-bottom-1:hover .header1{
+.locked-bottom-1:hover .header2{
     padding-left: 87px;
 }
-.locked-bottom-2:hover .header1{
+.locked-bottom-2:hover .header3{
     padding-left: 87px;
 }
-.locked-bottom-3:hover .header1{
+.locked-bottom-3:hover .header4{
     padding-left: 87px;
 }
 
 .header-wrap .header1{
-    background: transparent url("../img/triangle.png") no-repeat left center;
+    background: transparent url("../img/icons8-user-48.png") no-repeat left center;
+    background-size: 24px 24px;
+    padding-left: 72px;
+    margin: 0 auto;
+    font-size: 18px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+}
+
+.header-wrap .header2{
+    background: transparent url("../img/icons8-books-48.png") no-repeat left center;
+    background-size: 24px 24px;
+    padding-left: 72px;
+    margin: 0 auto;
+    font-size: 18px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+}
+
+.header-wrap .header3{
+    background: transparent url("../img/icons8-training-48.png") no-repeat left center;
+    background-size: 24px 24px;
+    padding-left: 72px;
+    margin: 0 auto;
+    font-size: 18px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+}
+
+.header-wrap .header4{
+    background: transparent url("../img/icons8-rss-48.png") no-repeat left center;
     background-size: 24px 24px;
     padding-left: 72px;
     margin: 0 auto;
