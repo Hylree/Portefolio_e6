@@ -412,9 +412,9 @@ $(window).ready(function(){
                                             '</div>'+
                                             '<div id="mySidenav" class="sidenav">'+
                                                 '<a onclick="closeMenuMobile()" id="closebtn" class="closebtn">&times;</a>'+
-                                                '<a  onclick="closeMenuMobile()" class="view-click-infos">informations</a>'+
+                                                '<a  onclick="closeMenuMobile()" class="view-click-infos">Mes informations</a>'+
                                                 '<a  onclick="closeMenuMobile()" class="view-click-exp">Mes expériences</a>'+
-                                                '<a onclick="closeMenuMobile()" class="view-click-projet">Les Projects</a>'+
+                                                '<a onclick="closeMenuMobile()" class="view-click-projet">Les Projets</a>'+
                                                 '<a onclick="closeMenuMobile()" class="view-click-veille">La veille</a>'+
                                             '</div>');
         
